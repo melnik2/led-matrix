@@ -56,10 +56,10 @@ void setup() {
 int key1;
 int count1=1;
 int m1;
-int n1=46;
+int n1=16;
 int n2=n1-1;
 byte numberToDisplay2[8]={0b00000001,0b00000010,0b00000100,0b00001000,0b00010000,0b00100000,0b01000000};
-byte numberToDisplay1[47][8]={_,R,E,K,L,A,M,A,_,V,_,A,V,T,O,_,WS1,W9,W3,W1,WS2,W3,W6,W8,WT,W7,W2,WT,W3,W5,_,WS1,W9,W3,W1,WS2,W3,W6,W8,WT,W7,W2,WT,W3,W5,_}; //n1+1
+byte numberToDisplay1[17][8]={_,R,E,K,L,A,M,A,_,V,_,A,V,T,O,_}; //n1+1
 
 void loop() {
     if(count1>0){  
@@ -72,7 +72,7 @@ void loop() {
     digitalWrite(latchPin, HIGH);
     delay(3);
       }
-    if (millis()/600>m1) m1=(millis()/600)+0.6, key1++; //0.6
+    if (millis()/500>m1) m1=(millis()/500)+0.5, key1++;
     if (key1>n2) key1=0, count1++;
     if (count1>3)count1=0;     
     }      
